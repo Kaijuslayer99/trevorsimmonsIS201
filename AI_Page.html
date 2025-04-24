@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c8eaef;
+      color: black;
+      text-align: center;
+      padding: 30px;
+    }
+
+    nav {
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    #fact {
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 700px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      font-size: 1.6em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-container {
+      margin-top: 120px;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      padding: 20px 50px;
+      font-size: 1.6em;
+      font-weight: bold;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="Freshman_Year.html">Freshman Year</a> |
+    <a href="Religion_Journey.html">My Religion Journey</a> |
+    <a href="Friends.html">Friends</a> |
+    <a href="index.html">Resume</a>
+  </nav>
+
+  <h1>Click Below for a Random Fact About Me</h1>
+
+  <div id="fact">Click the button to learn something cool!</div>
+
+  <div class="button-container">
+    <button onclick="showRandomFact()">Generate Fact</button>
+  </div>
+
+  <script>
+    const facts = [
+      "Favorite color is blue.",
+      "Favorite Pokémon is Mega Charizard X.",
+      "Can bench 265.",
+      "Can squat 425.",
+      "Favorite Marvel character is Thor.",
+      "Favorite villain is Megamind.",
+      "Adopted a dog from Mexico.",
+      "Loves steak.",
+      "Favorite restaurant is In-N-Out.",
+      "Teleportation > Flight.",
+      "Favorite sport to play is football.",
+      "Sunshine > Rain.",
+      "Mountains > Beach.",
+      "Favorite season is Spring.",
+      "Favorite car is a RAM TRX truck.",
+      "Jeep > Bronco.",
+      "Favorite song is 'Something Just Like This' by Coldplay and The Chainsmokers.",
+      "Favorite genre of music is rock.",
+      "Favorite rock band is Sum 41 or Bad Suns.",
+      "Cowboys > Aliens.",
+      "Gym > Cardio.",
+      "Phineas and Ferb is the best childhood show ever.",
+      "Reading > Movies.",
+      "Enjoys swing dancing.",
+      "Chocolate > Vanilla."
+    ];
+
+    function showRandomFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").textContent = facts[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
